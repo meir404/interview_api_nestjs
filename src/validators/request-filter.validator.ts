@@ -6,7 +6,8 @@ import {
 } from '../interfaces/request-filter.interface';
 
 export const filterSchema = Joi.object<FilterInterface>({
-  field: Joi.string().required(),
+  field: Joi.string(),
+  type: Joi.string(),
   operator: Joi.string()
     .valid(
       'eq',
